@@ -33,15 +33,23 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  gem "pry"
+  gem "pry-stack_explorer"
+  gem "pry-rails"
+  gem "pry-byebug"
+  gem "pry-doc"
 end
 
 group :test do
+ # gem "rspec", "3.5.0.pre"
+ gem "rspec", github: "rspec/rspec", branch: "master"
  gem "rspec-rails", github: "rspec/rspec-rails", branch: "master"
  gem "rspec-support", github: "rspec/rspec-support", branch: "master"
+ # gem "rspec-expectations", "3.5.0.pre"
  gem "rspec-expectations", github: "rspec/rspec-expectations", branch: "master"
  gem "rspec-mocks", github: "rspec/rspec-mocks", branch: "master"
+ 
+ # gem "rspec-core", path: "../../forks/rspec-core"
  gem "rspec-core", github: "shakacode/rspec-core", branch: "justin808-add-re-run-friendly-formatter"
 end
 
@@ -53,3 +61,4 @@ group :development do
   gem 'spring'
 end
 
+gem "awesome_print" # pretty print ruby objects
